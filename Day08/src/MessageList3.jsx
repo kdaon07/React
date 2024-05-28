@@ -79,7 +79,7 @@ export default function MsgListLast() {
             <InputMsg input={input} setInput={setInput} onCreate={onCreate} />
             {
                 msgList.map(({ id, msg }) => (
-                    <Message msg={msg} id={id} onRemove={onRemove} onModify={onModify} setInput={setInput} />
+                    <Message key={id} msg={msg} id={id} onRemove={onRemove} onModify={onModify} setInput={setInput} />
                 ))
             }
             <MdHome />
