@@ -1,13 +1,17 @@
-import Draggable from 'react-draggable';
+import React from 'react';
+import { useDrag } from 'react-dnd';
 
-const ImageBox = ({ src }) => {
+const ImageBox = ({ src, index }) => {
+    const [, drag] = useDrag(() => ({
+        type: 'image',
+        item: { src },
+    }));
+
     return (
-        <Draggable>
-            <div className="ImageBox">
-                <img src={src} alt="uploaded" />
-            </div>
-        </Draggable>
+        <div ref={drag}>
+            <img src={src} alt="uploaded" className="ImageBox" draggable="false" />
+        </div>
     );
-}
+};
 
 export default ImageBox;

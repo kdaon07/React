@@ -1,5 +1,7 @@
 body {
     background-color: #242222;
+    touch-action: none;
+    -webkit-touch-callout: none;
 }
 
 .Box {
@@ -116,4 +118,44 @@ fieldset {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.ColorSet {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 600px;
+    height: 50px;
+}
+
+.ColorSet button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.NameSet {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 200px;
+    height: 30px;
+}
+
+.RowSet {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 600px;
+    height: 50px;
+}
+
+.RowSet button{
+    width: 250px;
+    height: 50px;
+    border: none;
+    margin-left: 20px;
+    border-radius: 5px;
 }
